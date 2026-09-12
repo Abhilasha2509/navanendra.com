@@ -1,13 +1,931 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navanendra Singh</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navanendra Singh | Apparel Production & Industry–Academia</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --black:#0b0e0f;
+  --dark:#111617;
+  --ivory:#f6f3ed;
+  --cream:#ece7df;
+  --copper:#a7774f;
+  --light-copper:#c49468;
+  --grey:#5c5b58;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--ivory);
+  color:#171717;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+  min-height:720px;
+  color:white;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 72% 42%, rgba(255,255,255,.09), transparent 22%),
+    linear-gradient(90deg,rgba(4,8,9,.98) 0%,rgba(7,11,12,.92) 45%,rgba(12,16,17,.80) 100%);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.18;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0px,
+      transparent 90px,
+      rgba(255,255,255,.04) 91px,
+      rgba(255,255,255,.04) 93px
+    );
+  pointer-events:none;
+}
+
+.nav{
+  max-width:1450px;
+  margin:auto;
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 45px;
+  position:relative;
+  z-index:5;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.monogram{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  font-weight:500;
+}
+
+.brand-name{
+  font-size:10px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+}
+
+.navlinks{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  font-size:11px;
+}
+
+.navlinks a{
+  opacity:.85;
+  transition:.2s;
+}
+
+.navlinks a:hover{
+  opacity:1;
+  color:var(--light-copper);
+}
+
+.hero-inner{
+  max-width:1450px;
+  margin:auto;
+  padding:90px 60px 105px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:7px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;
+  font-size:86px;
+  line-height:.88;
+  letter-spacing:5px;
+  max-width:750px;
+}
+
+.gold-line{
+  width:68px;
+  height:4px;
+  background:var(--light-copper);
+  margin:34px 0 25px;
+}
+
+.hero-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  line-height:1.15;
+  max-width:690px;
+}
+
+.hero-copy{
+  max-width:610px;
+  font-size:15px;
+  font-weight:300;
+  margin-top:17px;
+  color:#dedede;
+}
+
+.explore{
+  display:inline-block;
+  border:1px solid var(--light-copper);
+  margin-top:35px;
+  padding:14px 27px;
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.explore:hover{
+  background:var(--light-copper);
+  color:#111;
+}
+
+.hero-side{
+  position:absolute;
+  right:7%;
+  top:140px;
+  border-left:2px solid var(--copper);
+  padding-left:20px;
+  font-size:10px;
+  line-height:2.2;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#ddd;
+}
+
+/* ---------- METRICS ---------- */
+
+.metrics{
+  background:#121718;
+  color:white;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:35px 5%;
+}
+
+.metric{
+  padding:10px 35px;
+  border-right:1px solid #394041;
+}
+
+.metric:last-child{
+  border-right:none;
+}
+
+.metric-number{
+  font-family:'Cormorant Garamond',serif;
+  font-size:43px;
+  line-height:1;
+}
+
+.metric-title{
+  color:#ddd;
+  margin-top:10px;
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+  max-width:1400px;
+  margin:auto;
+  padding:80px 60px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:85px;
+}
+
+.section-label{
+  font-size:10px;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.about h2,
+.journey h2,
+.research h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:48px;
+  font-weight:500;
+  line-height:1.02;
+}
+
+.about-copy p{
+  color:#454545;
+  margin-top:20px;
+  max-width:650px;
+  font-size:15px;
+}
+
+.button-light{
+  display:inline-block;
+  border:1px solid #555;
+  margin-top:27px;
+  padding:13px 25px;
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.quote{
+  border-left:2px solid var(--light-copper);
+  padding-left:25px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  font-style:italic;
+  line-height:1.05;
+  margin-bottom:28px;
+}
+
+.quote span{
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-style:normal;
+  font-size:9px;
+  letter-spacing:5px;
+  margin-top:18px;
+}
+
+.photo-placeholder{
+  min-height:300px;
+  background:
+    linear-gradient(135deg,#262a2a,#101313);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  position:relative;
+  overflow:hidden;
+}
+
+.photo-placeholder:before{
+  content:"";
+  position:absolute;
+  width:170%;
+  height:1px;
+  background:#555;
+  transform:rotate(-20deg);
+}
+
+.photo-placeholder span{
+  background:#151818;
+  padding:10px 15px;
+  z-index:2;
+}
+
+/* ---------- EXPERTISE ---------- */
+
+.expertise{
+  background:var(--cream);
+  padding:40px 5% 48px;
+}
+
+.expertise-inner{
+  max-width:1450px;
+  margin:auto;
+}
+
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  margin-top:25px;
+}
+
+.expertise-item{
+  min-height:105px;
+  border-right:1px solid #c9c1b6;
+  text-align:center;
+  padding:8px 14px;
+}
+
+.expertise-item:last-child{
+  border-right:none;
+}
+
+.expertise-icon{
+  font-size:28px;
+  color:#805d40;
+  margin-bottom:12px;
+}
+
+.expertise-item p{
+  font-size:12px;
+  line-height:1.35;
+}
+
+/* ---------- JOURNEY ---------- */
+
+.journey{
+  max-width:1450px;
+  margin:auto;
+  padding:65px 55px 85px;
+}
+
+.journey-intro{
+  color:#555;
+  margin:5px 0 25px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.card-image{
+  height:170px;
+  background:linear-gradient(145deg,#353939,#111515);
+  position:relative;
+  overflow:hidden;
+}
+
+.card-image:after{
+  content:"IMAGE";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8c8c8c;
+  letter-spacing:4px;
+  font-size:9px;
+}
+
+.card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  margin-top:10px;
+}
+
+.card p{
+  color:#5e5e5e;
+  font-size:11px;
+}
+
+.arrow{
+  float:right;
+  width:29px;
+  height:29px;
+  border-radius:50%;
+  background:#99704d;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ---------- RESEARCH ---------- */
+
+.research{
+  background:#111617;
+  color:white;
+  padding:75px 6%;
+}
+
+.research-inner{
+  max-width:1350px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:80px;
+}
+
+.research p{
+  color:#ccc;
+  font-weight:300;
+  margin-top:20px;
+}
+
+.research-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.research-box{
+  border-top:1px solid #876444;
+  padding-top:18px;
+}
+
+.research-box h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:23px;
+  font-weight:500;
+}
+
+.research-box p{
+  font-size:12px;
+  margin-top:6px;
+}
+
+/* ---------- CONNECT ---------- */
+
+.connect{
+  padding:80px 6%;
+  text-align:center;
+  background:#f6f3ed;
+}
+
+.connect h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:46px;
+  font-weight:500;
+}
+
+.connect p{
+  max-width:670px;
+  margin:15px auto 28px;
+  color:#555;
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.links a{
+  border:1px solid #8d765f;
+  padding:12px 20px;
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+  background:#090c0d;
+  color:#aaa;
+  text-align:center;
+  padding:28px;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:950px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    padding:75px 30px 90px;
+  }
+
+  .hero h1{
+    font-size:60px;
+  }
+
+  .hero-side{
+    display:none;
+  }
+
+  .metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .metric{
+    border-bottom:1px solid #394041;
+    padding:25px;
+  }
+
+  .about,
+  .research-inner{
+    grid-template-columns:1fr;
+  }
+
+  .expertise-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .expertise-item{
+    border-bottom:1px solid #c9c1b6;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .nav{
+    padding:0 22px;
+  }
+
+  .brand-name{
+    letter-spacing:3px;
+  }
+
+  .hero-inner{
+    padding:55px 24px 70px;
+  }
+
+  .eyebrow{
+    letter-spacing:4px;
+  }
+
+  .hero h1{
+    font-size:47px;
+    letter-spacing:2px;
+  }
+
+  .hero-subtitle{
+    font-size:23px;
+  }
+
+  .metrics{
+    grid-template-columns:1fr;
+  }
+
+  .metric{
+    border-right:none;
+  }
+
+  .about{
+    padding:55px 25px;
+    gap:45px;
+  }
+
+  .about h2,
+  .journey h2,
+  .research h2{
+    font-size:38px;
+  }
+
+  .expertise-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .journey{
+    padding:55px 24px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .research{
+    padding:60px 25px;
+  }
+
+  .research-points{
+    grid-template-columns:1fr;
+  }
+
+  .connect{
+    padding:60px 25px;
+  }
+}
+
+</style>
 </head>
 
 <body>
-  <h1>Navanendra Singh</h1>
-  <p>Apparel Production · Manufacturing Excellence · Industry–Academia</p>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<nav class="nav">
+  <div class="brand">
+    <div class="monogram">NS</div>
+    <div class="brand-name">Navanendra Singh</div>
+  </div>
+
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#expertise">Industry Experience</a>
+    <a href="#journey">Academia</a>
+    <a href="#research">Research</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
+
+<div class="hero-inner">
+
+  <div class="eyebrow">Industry &nbsp;|&nbsp; Academia &nbsp;|&nbsp; Innovation</div>
+
+  <h1>NAVANENDRA<br>SINGH</h1>
+
+  <div class="gold-line"></div>
+
+  <div class="hero-subtitle">
+    Apparel Production. Manufacturing Excellence.<br>
+    Industry–Academia.
+  </div>
+
+  <p class="hero-copy">
+    Bringing extensive apparel manufacturing experience into education,
+    research and industry engagement.
+  </p>
+
+  <a class="explore" href="#about">Explore &nbsp; ↓</a>
+
+</div>
+
+<div class="hero-side">
+  People<br>
+  Process<br>
+  Productivity<br>
+  Better Apparel
+</div>
+
+</section>
+
+
+<!-- METRICS -->
+<section class="metrics">
+
+<div class="metric">
+  <div class="metric-number">15+</div>
+  <div class="metric-title">Years Industry Experience</div>
+</div>
+
+<div class="metric">
+  <div class="metric-number">Industry</div>
+  <div class="metric-title">Apparel Production & Operations</div>
+</div>
+
+<div class="metric">
+  <div class="metric-number">RIC</div>
+  <div class="metric-title">Regional Industry Coordinator</div>
+</div>
+
+<div class="metric">
+  <div class="metric-number">Research</div>
+  <div class="metric-title">Publications · PhD · Innovation</div>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div class="about-copy">
+
+  <div class="section-label">About</div>
+
+  <h2>Industry Experience<br>for Real-World Impact</h2>
+
+  <p>
+    I am an Assistant Professor at NIFT Patna with over 15 years of
+    experience in apparel manufacturing, production, quality and operations.
+    My journey from industry to academia allows me to bring real-world
+    manufacturing insights into teaching, research and industry engagement.
+  </p>
+
+  <p>
+    As the Regional Industry Coordinator (RIC) at NIFT Patna, I work towards
+    strengthening industry–academia collaboration and creating meaningful
+    opportunities for students, faculty and the apparel sector.
+  </p>
+
+  <a class="button-light" href="#journey">Know More &nbsp; →</a>
+
+</div>
+
+<div>
+
+  <div class="quote">
+    “Practical experience makes better professionals.”
+    <span>NAVANENDRA SINGH</span>
+  </div>
+
+  <div class="photo-placeholder">
+    <span>Professional / Apparel Image</span>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+
+<div class="expertise-inner">
+
+<div class="section-label">Areas of Expertise</div>
+
+<div class="expertise-grid">
+
+<div class="expertise-item">
+  <div class="expertise-icon">▥</div>
+  <p>Production<br>Management</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">◇</div>
+  <p>Quality<br>Management</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">⚙</div>
+  <p>Operations<br>Management</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">▥</div>
+  <p>Industrial<br>Engineering</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">▤</div>
+  <p>SOP & Process<br>Implementation</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">⬡</div>
+  <p>Pattern, Tech-Pack<br>& Product Development</p>
+</div>
+
+<div class="expertise-item">
+  <div class="expertise-icon">●●●</div>
+  <p>Team Building<br>& Training</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- JOURNEY -->
+<section class="journey" id="journey">
+
+<div class="section-label">A Journey Across Industry and Academia</div>
+
+<div class="journey-intro">
+  Experience. Learning. Contribution. Continuing the Journey.
+</div>
+
+<div class="cards">
+
+<div class="card">
+  <div class="card-image"></div>
+  <span class="arrow">→</span>
+  <h3>Industry</h3>
+  <p>Production | Quality | Operations</p>
+</div>
+
+<div class="card">
+  <div class="card-image"></div>
+  <span class="arrow">→</span>
+  <h3>Academia</h3>
+  <p>Teaching | Mentoring | Learning</p>
+</div>
+
+<div class="card">
+  <div class="card-image"></div>
+  <span class="arrow">→</span>
+  <h3>Research</h3>
+  <p>Ideas | Publications | Innovation</p>
+</div>
+
+<div class="card">
+  <div class="card-image"></div>
+  <span class="arrow">→</span>
+  <h3>Industry Engagement</h3>
+  <p>Collaboration | RIC | Real-World Impact</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- RESEARCH -->
+<section class="research" id="research">
+
+<div class="research-inner">
+
+<div>
+  <div class="section-label">Research & Academia</div>
+  <h2>Knowledge Built<br>on Practice</h2>
+
+  <p>
+    Research interests shaped by extensive experience in apparel production,
+    manufacturing systems, productivity, operations and industry practice.
+  </p>
+</div>
+
+<div class="research-points">
+
+<div class="research-box">
+  <h3>Research Publications</h3>
+  <p>
+    Contributions to academic research through multiple publications and
+    scholarly work.
+  </p>
+</div>
+
+<div class="research-box">
+  <h3>Doctoral Research</h3>
+  <p>
+    Currently pursuing PhD with research connected to apparel and
+    manufacturing.
+  </p>
+</div>
+
+<div class="research-box">
+  <h3>Industry–Academia</h3>
+  <p>
+    Building stronger connections between education, industry practice and
+    professional development.
+  </p>
+</div>
+
+<div class="research-box">
+  <h3>Applied Expertise</h3>
+  <p>
+    Exploring practical solutions in apparel production, operations,
+    productivity and process improvement.
+  </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONNECT -->
+<section class="connect" id="connect">
+
+<div class="section-label">Connect</div>
+
+<h2>Ideas. Industry. Academia.</h2>
+
+<p>
+  Open to meaningful conversations, academic collaboration, industry
+  interaction, research exchange and knowledge sharing within the apparel
+  and manufacturing ecosystem.
+</p>
+
+<div class="links">
+  <a href="#">LinkedIn</a>
+  <a href="#">Google Scholar</a>
+  <a href="#">ResearchGate</a>
+  <a href="mailto:">Email</a>
+</div>
+
+</section>
+
+
+<footer>
+NAVANENDRA SINGH &nbsp; | &nbsp; APPAREL · INDUSTRY · ACADEMIA
+</footer>
+
 </body>
 </html>
