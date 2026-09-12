@@ -87,9 +87,14 @@ a{
 }
 
 .monogram{
-  font-family:'Cormorant Garamond',serif;
-  font-size:38px;
-  font-weight:500;
+  display: flex;
+  align-items: center;
+}
+
+.monogram img {
+  width: 65px;
+  height: auto;
+  display: block;
 }
 
 .brand-name{
@@ -640,7 +645,9 @@ footer{
 
 <nav class="nav">
   <div class="brand">
-    <div class="monogram">NS</div>
+    <div class="monogram">
+  <img src="monogram.png" alt="NS Monogram">
+</div>
     <div class="brand-name">Navanendra Singh</div>
   </div>
 
