@@ -681,6 +681,105 @@ footer{
   font-size:9px;
   letter-spacing:3px;
 }
+ /* ---------- ACADEMIA ---------- */
+
+.academia-section {
+  background: #ece7df;
+  padding: 90px 6%;
+}
+
+.academia-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.academia-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.academia-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.academia-heading p {
+  max-width: 600px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.academia-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #c9c1b6;
+}
+
+.academia-item {
+  padding: 30px 28px 15px 0;
+  margin-right: 28px;
+  border-right: 1px solid #c9c1b6;
+}
+
+.academia-item:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+.academia-item span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #99704d;
+}
+
+.academia-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 12px 0 10px;
+}
+
+.academia-item p {
+  color: #555;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .academia-section {
+    padding: 65px 7%;
+  }
+
+  .academia-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .academia-heading h2 {
+    font-size: 38px;
+  }
+
+  .academia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academia-item {
+    border-right: none;
+    border-bottom: 1px solid #c9c1b6;
+    margin-right: 0;
+    padding: 28px 0;
+  }
+
+  .academia-item:last-child {
+    border-bottom: none;
+  }
+}
  /* BOOKS */
 .books-section {
   background: #f5f1e9;
@@ -925,7 +1024,7 @@ footer{
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#expertise">Industry Experience</a>
-    <a href="#journey">Academia</a>
+    <a href="#academia">Academia</a>
     <a href="#research">Research</a>
     <a href="#connect">Connect</a>
   </div>
@@ -1106,7 +1205,7 @@ footer{
   <div class="card-image academia-image">
   <img src="pic2.png" alt="Navanendra Singh - Academia">
 </div>
-  <span class="arrow">→</span>
+  <a class="arrow" href="#academia" aria-label="Explore Academia">→</a>
   <h3>Academia</h3>
   <p>Teaching | Mentoring | Academic Leadership</p>
 </div>
@@ -1131,7 +1230,68 @@ footer{
 
 </div>
 </section>
+<!-- ACADEMIA -->
+<section class="academia-section" id="academia">
+  <div class="academia-inner">
 
+    <div class="section-label">Academia</div>
+
+    <div class="academia-heading">
+      <h2>Industry Experience<br>into the Classroom</h2>
+
+      <p>
+        Bringing years of apparel industry experience into teaching,
+        mentoring and academic engagement at NIFT — connecting classroom
+        learning with the realities of manufacturing and industry practice.
+      </p>
+    </div>
+
+    <div class="academia-grid">
+
+      <div class="academia-item">
+        <span>01</span>
+        <h3>Teaching</h3>
+        <p>
+          Engaging with students in areas related to apparel production,
+          manufacturing, operations and technology, with an emphasis on
+          practical and industry-oriented learning.
+        </p>
+      </div>
+
+      <div class="academia-item">
+        <span>02</span>
+        <h3>Mentoring</h3>
+        <p>
+          Guiding students through academic learning, projects and
+          professional development while encouraging problem-solving,
+          curiosity and application-based thinking.
+        </p>
+      </div>
+
+      <div class="academia-item">
+        <span>03</span>
+        <h3>Industry–Linked Learning</h3>
+        <p>
+          Connecting academic concepts with industry practices through
+          interaction, exposure and real-world perspectives from the
+          apparel and manufacturing sector.
+        </p>
+      </div>
+
+      <div class="academia-item">
+        <span>04</span>
+        <h3>Academic Contribution</h3>
+        <p>
+          Contributing to academic initiatives alongside teaching,
+          research and institutional responsibilities at the
+          National Institute of Fashion Technology.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <!-- BOOKS -->
 <section class="books-section" id="books">
   <div class="books-inner">
