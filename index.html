@@ -780,6 +780,115 @@ footer{
     border-bottom: none;
   }
 }
+ /* ---------- ENGAGEMENT & OUTREACH ---------- */
+
+.engagement-section {
+  background: #f6f3ed;
+  padding: 90px 6%;
+}
+
+.engagement-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.engagement-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.engagement-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.engagement-intro {
+  max-width: 620px;
+}
+
+.ric-label {
+  color: #99704d;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 13px;
+}
+
+.engagement-intro p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #c9c1b6;
+}
+
+.engagement-item {
+  padding: 30px 28px 15px 0;
+  margin-right: 28px;
+  border-right: 1px solid #c9c1b6;
+}
+
+.engagement-item:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+.engagement-item span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #99704d;
+}
+
+.engagement-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 12px 0 10px;
+}
+
+.engagement-item p {
+  color: #555;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .engagement-section {
+    padding: 65px 7%;
+  }
+
+  .engagement-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .engagement-heading h2 {
+    font-size: 38px;
+  }
+
+  .engagement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engagement-item {
+    border-right: none;
+    border-bottom: 1px solid #c9c1b6;
+    margin-right: 0;
+    padding: 28px 0;
+  }
+
+  .engagement-item:last-child {
+    border-bottom: none;
+  }
+}
  /* BOOKS */
 .books-section {
   background: #f5f1e9;
@@ -1223,7 +1332,7 @@ footer{
   <div class="card-image engagement-image">
   <img src="pic4.png" alt="Navanendra Singh - Industry Engagement and Outreach">
 </div>
-  <span class="arrow">→</span>
+  <a class="arrow" href="#engagement" aria-label="Explore Engagement and Outreach">→</a>
   <h3>Engagement &amp; Outreach</h3>
   <p>Collaboration | Outreach | Industry–Academia</p>
 </div>
@@ -1285,6 +1394,68 @@ footer{
           Contributing to academic initiatives alongside teaching,
           research and institutional responsibilities at the
           National Institute of Fashion Technology.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+ <!-- ENGAGEMENT & OUTREACH -->
+<section class="engagement-section" id="engagement">
+  <div class="engagement-inner">
+
+    <div class="section-label">Engagement &amp; Outreach</div>
+
+    <div class="engagement-heading">
+      <h2>Connecting Academia<br>with Industry</h2>
+
+      <div class="engagement-intro">
+        <div class="ric-label">REGIONAL INDUSTRY COORDINATOR · NIFT PATNA</div>
+        <p>
+          As Regional Industry Coordinator (RIC), I work at the interface
+          of academia and industry — facilitating meaningful interactions,
+          professional exposure and collaborative opportunities for students,
+          faculty and industry partners.
+        </p>
+      </div>
+    </div>
+
+    <div class="engagement-grid">
+
+      <div class="engagement-item">
+        <span>01</span>
+        <h3>Industry Engagement</h3>
+        <p>
+          Coordinating industry visits, expert interactions and collaborative
+          engagements that bring industry perspectives closer to academic learning.
+        </p>
+      </div>
+
+      <div class="engagement-item">
+        <span>02</span>
+        <h3>Professional Exposure</h3>
+        <p>
+          Supporting internships, placements and opportunities that connect
+          students with professional environments and industry practice.
+        </p>
+      </div>
+
+      <div class="engagement-item">
+        <span>03</span>
+        <h3>Institutional Collaboration</h3>
+        <p>
+          Facilitating industry partnerships, MoUs and collaborative initiatives
+          that strengthen long-term engagement between academia and industry.
+        </p>
+      </div>
+
+      <div class="engagement-item">
+        <span>04</span>
+        <h3>Outreach &amp; Community</h3>
+        <p>
+          Contributing to outreach and community-oriented initiatives that extend
+          knowledge, interaction and institutional engagement beyond the classroom.
         </p>
       </div>
 
