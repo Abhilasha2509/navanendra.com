@@ -571,6 +571,106 @@ footer{
   font-size:9px;
   letter-spacing:3px;
 }
+ /* BOOKS */
+.books-section {
+  background: #f5f1e9;
+  padding: 90px 6%;
+}
+
+.books-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.books-section .section-kicker {
+  font-size: 13px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.books-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.books-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 55px;
+  max-width: 650px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  align-items: start;
+}
+
+.book-card {
+  text-align: center;
+}
+
+.book-cover {
+  height: 430px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.book-cover img {
+  max-width: 100%;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 14px 30px rgba(0,0,0,.14);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 38px rgba(0,0,0,.20);
+}
+
+.book-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 auto 8px;
+  max-width: 360px;
+}
+
+.book-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: .7;
+  margin: 0 auto;
+  max-width: 330px;
+}
+
+@media (max-width: 800px) {
+  .books-section {
+    padding: 65px 7%;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .book-cover {
+    height: 380px;
+  }
+
+  .books-section h2 {
+    font-size: 38px;
+  }
+}
 
 /* ---------- RESPONSIVE ---------- */
 
@@ -920,7 +1020,46 @@ footer{
 </div>
 </section>
 
+<!-- BOOKS -->
+<section class="books-section" id="books">
+  <div class="books-inner">
 
+    <div class="section-kicker">BOOKS &amp; AUTHORED WORKS</div>
+    <h2>Ideas in Print</h2>
+    <p class="books-intro">
+      Exploring technology, innovation and emerging applications across
+      engineering and fashion.
+    </p>
+
+    <div class="books-grid">
+
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="book1.png" alt="Applied AI in Modern Engineering">
+        </div>
+        <h3>Applied AI in Modern Engineering</h3>
+        <p>Principles and Practices</p>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="book2.png" alt="Artificial Intelligence and IoT Integration in Fashion Innovation">
+        </div>
+        <h3>Artificial Intelligence and IoT Integration in Fashion Innovation</h3>
+        <p>AI · IoT · Fashion Innovation</p>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <img src="book3.png" alt="Exploring Explainable IoT">
+        </div>
+        <h3>Exploring Explainable IoT</h3>
+        <p>Recent Trends, Challenges and Future Directions</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- RESEARCH -->
 <section class="research" id="research">
 
