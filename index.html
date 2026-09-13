@@ -2111,6 +2111,25 @@ footer{
 <footer>
 NAVANENDRA SINGH &nbsp; | &nbsp; APPAREL · INDUSTRY · ACADEMIA
 </footer>
+<!--
+REFRESH-TO-HOME FUNCTION — CURRENTLY DISABLED
 
+Purpose:
+When enabled, refreshing a URL such as navanendra.com/#industry
+removes the section anchor and returns the visitor to the homepage hero.
+
+Currently disabled because this is a single-page website and keeping
+the anchor allows sections such as #industry and #research to have
+their own shareable/direct links.
+
+<script>
+  window.addEventListener("load", function () {
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
+-->
 </body>
 </html>
