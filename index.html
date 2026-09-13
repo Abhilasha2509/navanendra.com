@@ -482,48 +482,158 @@ a{
   align-items:center;
 }
 
-/* ---------- RESEARCH ---------- */
-
-.research{
-  background:#111617;
-  color:white;
-  padding:75px 6%;
+/* RESEARCH & PUBLICATIONS */
+.research-section {
+  background: #171715;
+  color: #f4f0e8;
+  padding: 100px 6%;
 }
 
-.research-inner{
-  max-width:1350px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:80px;
+.research-inner {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.research p{
-  color:#ccc;
-  font-weight:300;
-  margin-top:20px;
+.research-section .section-kicker {
+  font-size: 12px;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+  opacity: .75;
 }
 
-.research-points{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.research-heading {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 70px;
 }
 
-.research-box{
-  border-top:1px solid #876444;
-  padding-top:18px;
+.research-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 55px;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0;
 }
 
-.research-box h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:23px;
-  font-weight:500;
+.research-heading p {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: .72;
+  margin: 0;
+  max-width: 570px;
 }
 
-.research-box p{
-  font-size:12px;
-  margin-top:6px;
+.publication-list {
+  border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 240px;
+  gap: 30px;
+  align-items: center;
+  padding: 27px 0;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.pub-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  opacity: .5;
+}
+
+.pub-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+.pub-meta {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: right;
+  opacity: .55;
+}
+
+.research-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-end;
+  margin-top: 55px;
+}
+
+.research-award {
+  max-width: 600px;
+}
+
+.research-award span {
+  font-size: 10px;
+  letter-spacing: 4px;
+  opacity: .55;
+}
+
+.research-award p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 10px 0 0;
+}
+
+.research-links {
+  display: flex;
+  gap: 30px;
+}
+
+.research-links a {
+  color: #f4f0e8;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255,255,255,.45);
+}
+
+.research-links a:hover {
+  opacity: .65;
+}
+
+@media (max-width: 800px) {
+  .research-section {
+    padding: 70px 7%;
+  }
+
+  .research-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .research-heading h2 {
+    font-size: 42px;
+  }
+
+  .publication-item {
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+  }
+
+  .pub-meta {
+    grid-column: 2;
+    text-align: left;
+    margin-top: -5px;
+  }
+
+  .research-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .research-links {
+    flex-wrap: wrap;
+  }
 }
 
 /* ---------- CONNECT ---------- */
@@ -1060,59 +1170,93 @@ footer{
     </div>
   </div>
 </section>
-<!-- RESEARCH -->
-<section class="research" id="research">
+<!-- RESEARCH & PUBLICATIONS -->
+<section class="research-section" id="research">
+  <div class="research-inner">
 
-<div class="research-inner">
+    <div class="section-kicker">RESEARCH &amp; INNOVATION</div>
 
-<div>
-  <div class="section-label">Research & Academia</div>
-  <h2>Knowledge Built<br>on Practice</h2>
+    <div class="research-heading">
+      <h2>Ideas. Inquiry. Application.</h2>
+      <p>
+        Research focused on the intersection of apparel, manufacturing,
+        supply chains and emerging technologies — translating academic
+        inquiry into relevant industry applications.
+      </p>
+    </div>
 
-  <p>
-    Research interests shaped by extensive experience in apparel production,
-    manufacturing systems, productivity, operations and industry practice.
-  </p>
-</div>
+    <div class="publication-list">
 
-<div class="research-points">
+      <div class="publication-item">
+        <span class="pub-number">01</span>
+        <div class="pub-title">
+          AI, IoT, and Blockchain in Fashion: Confronting Industry
+          Applications, Challenges with Technological Solutions
+        </div>
+        <span class="pub-meta">2024 · TECHNOLOGY &amp; FASHION</span>
+      </div>
 
-<div class="research-box">
-  <h3>Research Publications</h3>
-  <p>
-    Contributions to academic research through multiple publications and
-    scholarly work.
-  </p>
-</div>
+      <div class="publication-item">
+        <span class="pub-number">02</span>
+        <div class="pub-title">
+          Automation and Robotics in Apparel Industry
+        </div>
+        <span class="pub-meta">2024 · APPAREL MANUFACTURING</span>
+      </div>
 
-<div class="research-box">
-  <h3>Doctoral Research</h3>
-  <p>
-    Currently pursuing PhD with research connected to apparel and
-    manufacturing.
-  </p>
-</div>
+      <div class="publication-item">
+        <span class="pub-number">03</span>
+        <div class="pub-title">
+          RFID Technology Implication in the Apparel Industry
+        </div>
+        <span class="pub-meta">2024 · INDUSTRY 4.0</span>
+      </div>
 
-<div class="research-box">
-  <h3>Industry–Academia</h3>
-  <p>
-    Building stronger connections between education, industry practice and
-    professional development.
-  </p>
-</div>
+      <div class="publication-item">
+        <span class="pub-number">04</span>
+        <div class="pub-title">
+          Supply Chain Management in Apparel Industry
+        </div>
+        <span class="pub-meta">2024 · SUPPLY CHAIN</span>
+      </div>
 
-<div class="research-box">
-  <h3>Applied Expertise</h3>
-  <p>
-    Exploring practical solutions in apparel production, operations,
-    productivity and process improvement.
-  </p>
-</div>
+      <div class="publication-item">
+        <span class="pub-number">05</span>
+        <div class="pub-title">
+          Automatically Positioning the Garment in a Warehouse at the
+          Desired Place using Artificial Intelligence
+        </div>
+        <span class="pub-meta">2022 · AI &amp; APPAREL</span>
+      </div>
 
-</div>
-</div>
+    </div>
+
+    <div class="research-footer">
+
+      <div class="research-award">
+        <span>RECOGNITION</span>
+        <p>
+          Best Paper Award · International Conference on Advanced Materials
+          &amp; Technologies for Industry 4.0 · 2023
+        </p>
+      </div>
+
+      <div class="research-links">
+        <a href="https://scholar.google.com/citations?user=-gkw0CgAAAAJ&hl=en&oi=ao"
+           target="_blank" rel="noopener noreferrer">
+          GOOGLE SCHOLAR ↗
+        </a>
+
+        <a href="https://www.researchgate.net/profile/Navanendra-Singh"
+           target="_blank" rel="noopener noreferrer">
+          RESEARCHGATE ↗
+        </a>
+      </div>
+
+    </div>
+
+  </div>
 </section>
-
 
 <!-- CONNECT -->
 <section class="connect" id="connect">
