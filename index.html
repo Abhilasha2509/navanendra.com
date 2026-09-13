@@ -681,6 +681,226 @@ footer{
   font-size:9px;
   letter-spacing:3px;
 }
+ /* ---------- INDUSTRY EXPERIENCE ---------- */
+
+.industry-section {
+  background: #1b1a18;
+  color: #f4f0e8;
+  padding: 100px 6%;
+}
+
+.industry-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.industry-section .section-label {
+  color: #c5a27c;
+}
+
+.industry-heading {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 90px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.industry-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.02;
+  margin: 0;
+}
+
+.industry-heading p {
+  max-width: 610px;
+  color: rgba(244, 240, 232, .68);
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* IMPACT NUMBERS */
+
+.industry-impact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,.22);
+  border-bottom: 1px solid rgba(255,255,255,.22);
+  margin-bottom: 80px;
+}
+
+.impact-item {
+  padding: 38px 28px 38px 0;
+  margin-right: 28px;
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+
+.impact-item:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+.impact-item strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #d0ad86;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.impact-item span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(244,240,232,.55);
+}
+
+/* VALUE */
+
+.industry-value-heading {
+  margin-bottom: 35px;
+}
+
+.industry-value-heading > span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #c5a27c;
+  margin-bottom: 12px;
+}
+
+.industry-value-heading h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* CAPABILITIES */
+
+.industry-capabilities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+
+.industry-capability {
+  padding: 32px 28px 15px 0;
+  margin-right: 28px;
+  border-right: 1px solid rgba(255,255,255,.18);
+}
+
+.industry-capability:last-child {
+  border-right: none;
+  margin-right: 0;
+}
+
+.industry-capability > span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #c5a27c;
+}
+
+.industry-capability h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 23px;
+  font-weight: 500;
+  margin: 13px 0 11px;
+}
+
+.industry-capability p {
+  color: rgba(244,240,232,.62);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* CTA */
+
+.industry-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 65px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+
+.industry-cta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.industry-cta a {
+  color: #f4f0e8;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  border-bottom: 1px solid #c5a27c;
+  padding-bottom: 7px;
+  white-space: nowrap;
+}
+
+.industry-cta a:hover {
+  color: #c5a27c;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .industry-section {
+    padding: 70px 7%;
+  }
+
+  .industry-heading {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 50px;
+  }
+
+  .industry-heading h2 {
+    font-size: 40px;
+  }
+
+  .industry-impact {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+  }
+
+  .impact-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    margin-right: 0;
+    padding: 28px 15px 28px 0;
+  }
+
+  .impact-item strong {
+    font-size: 31px;
+  }
+
+  .industry-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-capability {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    margin-right: 0;
+    padding: 28px 0;
+  }
+
+  .industry-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
  /* ---------- ACADEMIA ---------- */
 
 .academia-section {
@@ -1132,7 +1352,7 @@ footer{
   <div class="navlinks">
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#expertise">Industry Experience</a>
+    <a href="#industry">Industry Experience</a>
     <a href="#academia">Academia</a>
     <a href="#research">Research</a>
     <a href="#connect">Connect</a>
@@ -1305,7 +1525,7 @@ footer{
   <div class="card-image industry-image">
   <img src="pic3.png" alt="Navanendra Singh - Apparel Industry">
 </div>
-  <a class="arrow" href="#expertise" aria-label="Explore Industry Experience">→</a>
+  <a class="arrow" href="#industry" aria-label="Explore Industry Experience">→</a>
   <h3>Industry</h3>
   <p>Production | Quality | Operations</p>
 </div>
@@ -1338,6 +1558,104 @@ footer{
 </div>
 
 </div>
+</section>
+ <!-- INDUSTRY EXPERIENCE -->
+<section class="industry-section" id="industry">
+  <div class="industry-inner">
+
+    <div class="section-label">Industry Experience</div>
+
+    <div class="industry-heading">
+      <h2>Manufacturing Problems.<br>
+          Practical Solutions.<br>
+          Measurable Outcomes.</h2>
+
+      <p>
+        More than 13 years across apparel production, quality and operations
+        have built an understanding of manufacturing that goes beyond individual
+        functions — from line performance and WIP to quality systems, material
+        flow, manpower, product execution and process improvement.
+      </p>
+    </div>
+
+    <!-- IMPACT NUMBERS -->
+    <div class="industry-impact">
+
+      <div class="impact-item">
+        <strong>22%</strong>
+        <span>Productivity Improvement</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>3 Days → 4 Hours</strong>
+        <span>First-Piece Output Time</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>1500 → 300</strong>
+        <span>Line WIP Reduction · Pieces</span>
+      </div>
+
+      <div class="impact-item">
+        <strong>10h → 2h</strong>
+        <span>Fabric Retrieval &amp; Issue Time</span>
+      </div>
+
+    </div>
+
+    <div class="industry-value-heading">
+      <span>WHERE EXPERIENCE CREATES VALUE</span>
+      <h3>From shop floor challenges to better systems.</h3>
+    </div>
+
+    <!-- CAPABILITIES -->
+    <div class="industry-capabilities">
+
+      <div class="industry-capability">
+        <span>01</span>
+        <h3>Production &amp; Productivity</h3>
+        <p>
+          Line balancing, capacity, workflow, WIP control, layouts,
+          manpower planning and production performance.
+        </p>
+      </div>
+
+      <div class="industry-capability">
+        <span>02</span>
+        <h3>Quality Systems</h3>
+        <p>
+          Quality assurance, AQL, defect reduction, process confirmation,
+          SOP implementation, corrective action and quality culture.
+        </p>
+      </div>
+
+      <div class="industry-capability">
+        <span>03</span>
+        <h3>Process Improvement</h3>
+        <p>
+          Material movement, indexing, standardisation, first-run capability,
+          process validation and continuous improvement.
+        </p>
+      </div>
+
+      <div class="industry-capability">
+        <span>04</span>
+        <h3>Product &amp; Technical</h3>
+        <p>
+          Jackets, trousers, waistcoats and shirts — with experience spanning
+          patterns, fit, specifications, tech packs and size sets.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="industry-cta">
+      <p>Every manufacturing challenge starts with a conversation.</p>
+      <a href="#connect">DISCUSS AN INDUSTRY CHALLENGE →</a>
+    </div>
+
+  </div>
 </section>
 <!-- ACADEMIA -->
 <section class="academia-section" id="academia">
