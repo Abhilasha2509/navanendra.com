@@ -679,8 +679,56 @@ a{
 @media (max-width: 800px) {
   .research-section {
     padding: 70px 7%;
-  }
+  
+/* MOBILE HERO FIX */
 
+.hero {
+  min-height: 850px;
+  overflow: hidden;
+}
+
+.hero-photo {
+  top: 17% !important;
+  right: -12% !important;
+  width: 72% !important;
+  height: 78% !important;
+  opacity: 0.72;
+  z-index: 0 !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 72%;
+}
+
+.hero-side {
+  display: none !important;
+}
+   /* MOBILE HERO TYPOGRAPHY */
+
+.hero-content h1 {
+  font-size: 64px !important;
+  line-height: 0.92 !important;
+}
+
+.hero-kicker {
+  font-size: 12px !important;
+  letter-spacing: 5px !important;
+  white-space: nowrap;
+}
+
+.hero-tagline {
+  font-size: 25px !important;
+  line-height: 1.35 !important;
+}
+
+.hero-description {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  max-width: 90%;
+}
+}
   .research-heading {
     grid-template-columns: 1fr;
     gap: 25px;
